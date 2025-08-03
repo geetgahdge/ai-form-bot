@@ -1,15 +1,77 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Geet's Page</title>
+  <meta charset="UTF-8">
+  <title>Geet's Page</title>
+
+  <!-- CSS is now directly in the HTML -->
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: yellow !important;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .form-container {
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 400px;
+      box-sizing: border-box;
+    }
+
+    h1 {
+      font-size: 20px;
+      margin-bottom: 20px;
+      text-align: center;
+      color: #333;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
 </head>
 <body>
-<h1>please do fill bellow details to apply for csi committee</h1>
-<form action="thankyou.html" method="post">
-<input type="text" name="username" placeholder="Name"><br><br>
-<input type="email" name="email" placeholder="xyz@gmail.com"><br><br>
-<input type="password" name="password" placeholder="password"><br><br>
-<input type="submit" value="submit">
-</form>
+  <div class="form-container">
+    <form action="thankyou.html" method="post">
+      <h1>Please fill in the details to apply for the CSI committee</h1>
+
+      <input type="text" name="username" placeholder="Name" required><br><br>
+      <input type="email" name="email" placeholder="xyz@gmail.com" required><br><br>
+      <input type="password" name="password" placeholder="Password" required><br><br>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
 </body>
 </html>
